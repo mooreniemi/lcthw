@@ -2,17 +2,20 @@
 
 int main(int argc, char *argv[])
 {
-  int inty, jinty;
-  int *pointy; /* a pointer to an integer */
+  int i, s[4], t[4], u=0;
 
-  pointy = &inty; /* get mem address of inty and give it to pointy as its value */
-  *pointy = 5; /* set value of mem address you got from inty to 5 */
+  for (i = 0; i <= 4; ++i) {
+    s[i] = i;
+    t[i] = i;
+  }
 
-  printf("actual value of pointy is mem address: %d\n", pointy);
-  jinty = inty; /* copy value of inty to jinty */
+  printf("s:t\n");
 
-  /* will output 5 5 5 */
-  printf("inty is %d and jinty is %d while *pointy is the value through the mem address to inty %d\n", inty, jinty, *pointy);
+  for (i = 0; i <= 4; ++i) {
+    printf("%d:%d\n", s[i], s[i]);
+  }
+
+  printf("u = %d\n", u);
 
   return 0;
 }
