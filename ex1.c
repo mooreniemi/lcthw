@@ -1,21 +1,24 @@
 #include <stdio.h>
 
-int main(int argc, char *argv[])
+void swap(int *i, int *j)
 {
-  int i, s[4], t[4], u=0;
+  int t;
+  t = *i;
+  *i = *j;
+  *j = t;
+}
 
-  for (i = 0; i <= 4; ++i) {
-    s[i] = i;
-    t[i] = i;
-  }
+int main()
+{
+  int a,b;
 
-  printf("s:t\n");
+  a=5;
+  b=10;
 
-  for (i = 0; i <= 4; ++i) {
-    printf("%d:%d\n", s[i], s[i]);
-  }
-
-  printf("u = %d\n", u);
+  printf("%d %d\n", a, b);
+  swap(&a,&b);
+  printf("%d %d\n", a, b);
 
   return 0;
+
 }
