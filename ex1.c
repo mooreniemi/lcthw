@@ -1,26 +1,36 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
 
-void swap(int *i, int *j)
+void swap(int *first_address, int *second_address)
 {
   int holding_pen;
-  // put the first int in the pen
-  holding_pen = *i;
-  // put the second int into the first position
-  *i = *j;
-  // take i from the holding pen and put it in second position
-  *j = holding_pen;
+
+  holding_pen = *first_address;
+
+  *first_address = *second_address;
+
+  *second_address = holding_pen;
 }
 
-int main()
+int main(int argc, char *argv[])
 {
-  int a,b;
+  if(argc == 1) {
+    printf("you need 2 things to swap\n");
+    return 1;
+  } else {
+    int a,b;
 
-  a = 5;
-  b = 10;
+    a = atoi(argv[2]);
+    b = atoi(argv[3]);
 
-  printf("preswap: %d %d\n", a, b);
-  swap(&a,&b);
-  printf("postswap: %d %d\n", a, b);
+    printf("preswap: %d %d\n", a, b);
+
+    // pass ints in by their addresses
+    swap(&a, &b);
+
+    printf("postswap: %d %d\n", a, b);
+  }
 
   return 0;
 
