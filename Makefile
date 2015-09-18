@@ -1,7 +1,9 @@
 CLFALGS=-Wall -g
 
 all:
-	cc     ex2.c   -o ex2
+	cc     ex3.c   -o ex3
+	cc     ex3_test.c   -o ex3_test
 
 clean:
-	rm -f ex2
+	rm -f ex3
+	rm -f ex3_test
