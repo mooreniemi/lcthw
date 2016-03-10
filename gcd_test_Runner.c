@@ -22,7 +22,7 @@
 #include "unity.h"
 #include <setjmp.h>
 #include <stdio.h>
-#include "ex3.h"
+#include "gcd.h"
 
 //=======External Functions This Runner Calls=====
 extern void setUp(void);
@@ -43,7 +43,7 @@ void resetTest(void)
 //=======MAIN=====
 int main(void)
 {
-  UnityBegin("ex3_test.c");
+  UnityBegin("gcd_test.c");
   RUN_TEST(test_gcd, 12);
   RUN_TEST(test_gcd_again, 17);
 

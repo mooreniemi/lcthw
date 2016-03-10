@@ -1,5 +1,5 @@
 #include "unity.h"
-#include "ex3.h"
+#include "gcd.h"
 
 void setUp()
 {
