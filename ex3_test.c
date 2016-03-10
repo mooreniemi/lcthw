@@ -9,12 +9,12 @@ void tearDown()
 {
 }
 
-void test_IgnoredTest(void)
-{
-    TEST_IGNORE_MESSAGE("This Test Was Ignored On Purpose");
-}
-
 void test_gcd(void)
 {
-  TEST_ASSERT_EQUAL(7, gcd(7,8));
+  TEST_ASSERT_EQUAL(4, gcd(8,12));
+}
+
+void test_gcd_again(void)
+{
+  TEST_ASSERT_EQUAL(15, gcd(30,105));
 }

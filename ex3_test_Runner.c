@@ -27,8 +27,8 @@
 //=======External Functions This Runner Calls=====
 extern void setUp(void);
 extern void tearDown(void);
-extern void test_IgnoredTest(void);
 extern void test_gcd(void);
+extern void test_gcd_again(void);
 
 
 //=======Test Reset Option=====
@@ -44,8 +44,8 @@ void resetTest(void)
 int main(void)
 {
   UnityBegin("ex3_test.c");
-  RUN_TEST(test_IgnoredTest, 12);
-  RUN_TEST(test_gcd, 17);
+  RUN_TEST(test_gcd, 12);
+  RUN_TEST(test_gcd_again, 17);
 
   return (UnityEnd());
 }
