@@ -13,14 +13,14 @@ void swap(int *first_address, int *second_address) {
 }
 
 int main(int argc, char *argv[]) {
-  if(argc == 1) {
+  if(argc <= 2) {
     printf("you need 2 things to swap\n");
     return 1;
   } else {
     int a, b;
 
-    a = atoi(argv[2]);
-    b = atoi(argv[3]);
+    a = atoi(argv[1]);
+    b = atoi(argv[2]);
 
     printf("preswap: %d %d\n", a, b);
 
